@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Relogio</title>
+    <style>
+        #div_relogio{
+                  
+             background-color: rgb(110, 0, 0);
+             width:auto;
+             height:500px;
+             color: white;
+             font-style:oblique;
+             font-size: 180px;
+             text-align: center;
+             border-radius: 2pc;
+             border-color: tomato;
+             border-top: yellow;
+             border: 5px;
+             scroll-margin: 10px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="div_relogio">
+        Que horas são?
+    </div>
+</body>
+     <script>
+
+        function Relogio(){
+            var data = new Date();
+            var hr = data.getHours();
+            var min = data.getMinutes();
+            var s = data.getSeconds();
+            var tempo_total = hr + ":" + min + ":" + s;
+            var tempo = window.document.getElementById('div_relogio');
+            tempo.innerHTML = tempo_total; 
+        }
+
+        setInterval(Relogio,500);
+     </script>
+</html>
